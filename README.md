@@ -1,9 +1,9 @@
-## Minirs
-###### Rust minimal bin size boilerplate
+# Minirs
+### Rust minimal bin size boilerplate
 ---
 
 The goal of this boilerplate is to make a lightweight binary file without making your project look like a fucking mess.
-
+Current release size is: `30872 bytes`
 
 
 ### Setup
@@ -31,4 +31,20 @@ commit-date: 2020-02-05
 host: x86_64-unknown-linux-gnu
 release: 1.43.0-nightly
 LLVM version: 9.0
+```
+Place your platform value to `TARGET` variable in `Rakefile`
+
+##### How to rename binary file
+To change name of your binary you need to update Rakefile and Cargo.toml
+Rakefile:
+```ruby
+TARGET='....'
+BIN='my-awesome-custom-name'
+...
+```
+Cargo.toml:
+```toml
+[package]
+name = "my-awesome-custom-name"
+...
 ```
